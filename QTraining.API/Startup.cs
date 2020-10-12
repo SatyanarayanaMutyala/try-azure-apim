@@ -39,7 +39,7 @@ namespace QTraining.API
 
             services.AddSwaggerGen(setupAction =>
             {
-                setupAction.SwaggerDoc("V1", new Microsoft.OpenApi.Models.OpenApiInfo
+                setupAction.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
                 {
                     Title = "QTraining API",
                     Description = "Api to maintain QTraining session",
@@ -60,7 +60,7 @@ namespace QTraining.API
             app.UseSwagger();
             app.UseSwaggerUI(setupAction =>
             {
-               setupAction.SwaggerEndpoint("swagger/v1/swagger.json", "QTraining Session API V1");
+               setupAction.SwaggerEndpoint("v1/swagger.json", "QTraining Session API V1");
             });
 
             app.UseRouting();
